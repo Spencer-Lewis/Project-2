@@ -1,0 +1,22 @@
+<div id='form'>
+<%= form_for @post do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</div>
