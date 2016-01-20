@@ -2,6 +2,9 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @user = User.all
+
+
   end
 
   def new
@@ -39,6 +42,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
+    Comment.where(post_id: @post.id).destroy_all
     @post.destroy
     redirect_to posts_path
   end

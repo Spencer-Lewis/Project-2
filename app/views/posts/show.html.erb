@@ -1,16 +1,16 @@
+<h2>Posted by: <%= @users.find(@post.user_id).email %></h2>
 <h2>Title: <%= @post.title %> <br></h2>
 <h2>Image: <img src='<%= @post.image %>'> <br></h2>
-<h2>Link: <%= @post.link %> <br></h2>
+<h2><a href='<%= @post.link %>'>Source Link</a></h2>
 
-<br><br>
-<a href='/posts/<%= @post.id %>/edit'>Edit This Post</a><br><br>
-<%= link_to "Delete this Post!", @post, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %><br><br>
+
+
 <a href='/posts/<%= @post.id %>/new'>Comment on this post</a>
 <br><br>
-<a href='/posts'>Home</a>
+
 
 <h1>Comments:</h1>
 <% @comments.each do |comment| %>
-<h2>USER ID: <%= @users.find(comment.user_id).email %></h2>
-<h3>Comment: <%= comment.content %></h3>
+<h4>USER ID: <%= @users.find(comment.user_id).email %></h4>
+<h2>Comment: <%= comment.content %></h2><br>
 <% end %>

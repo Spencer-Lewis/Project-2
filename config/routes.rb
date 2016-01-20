@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   get '/comments/:id/edit', to: 'comments#edit', as: :edit_comment
   patch '/comments/:id', to: 'comments#update'
   delete '/comments/:id', to: 'comments#destroy'
+  delete '/comments', to: 'posts#destroy'
 end
 
