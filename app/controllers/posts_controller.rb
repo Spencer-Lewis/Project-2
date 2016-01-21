@@ -3,8 +3,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @user = User.all
-
-
   end
 
   def new
@@ -31,6 +29,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @user_id = User.find(current_user).id.to_s
     @post = Post.find(params[:id])
   end
 

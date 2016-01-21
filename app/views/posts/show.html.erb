@@ -1,16 +1,19 @@
-<h2>Posted by: <%= @users.find(@post.user_id).email %></h2>
-<h2>Title: <%= @post.title %> <br></h2>
-<h2>Image: <img src='<%= @post.image %>'> <br></h2>
-<h2><a href='<%= @post.link %>'>Source Link</a></h2>
+<br>
+<div id='showPost'>
+<ul id='postshow'>
+  <li>Title: <%= @post.title %></li><br>
+  <li>Posted by: <%= @users.find(@post.user_id).email %></li><br>
+  <li><a href='<%= @post.link %>'>Source Link</a></li>
+</ul>
+<h2><img src='<%= @post.image %>'> <br></h2>
+<h3><a href='/posts/<%= @post.id %>/new'>Comment on this post (must be logged in)</a></h3>
 
-
-
-<a href='/posts/<%= @post.id %>/new'>Comment on this post</a>
-<br><br>
-
-
-<h1>Comments:</h1>
+</div>
+<h1 id='commentHeader'>Comments:</h1>
+<div id='allComments'>
 <% @comments.each do |comment| %>
-<h4>USER ID: <%= @users.find(comment.user_id).email %></h4>
-<h2>Comment: <%= comment.content %></h2><br>
+<div id='comments'>
+<div id='namePlate'><%= @users.find(comment.user_id).email %>:</div><div id='commentContent'>"<%= comment.content %>"</div>
+</div>
 <% end %>
+</div>

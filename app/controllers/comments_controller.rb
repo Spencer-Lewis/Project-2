@@ -22,10 +22,12 @@ class CommentsController < ApplicationController
   end
 
   def show
+    @user_id = User.find(current_user).id.to_s
     @comment = Comment.find(params[:id])
   end
 
   def edit
+    @user_id = User.find(current_user).id.to_s
     @comment = Comment.find(params[:id])
   end
 

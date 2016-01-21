@@ -1,20 +1,26 @@
 <br>
-<h1>User Comments:</h1>
+<div id='userComments'>
+<h1 id='userCommentHeader'>User Comments:</h1>
 <% @comments.each do |comment| %>
-<h1><a href='/comments/<%= comment.id %>'>Show this Comment</a></h1>
-<h2>USER ID: <%= @users.find(comment.user_id).email %></h2>
-<h2>POST: <a href='/posts/<%= comment.post_id %>'><%= @posts.find(comment.post_id) %></a></h2>
-<h3>Comment: <%= comment.content %></h3><br>
-<% end %>
+<div id='userComment'>
+  <h2>POST: <a href='/posts/<%= comment.post_id %>'><%= Post.find(comment.post_id).title %></a></h2>
+  <h3>Comment: "<%= comment.content %>"</h3>
+  <h3><a href='/comments/<%= comment.id %>'>Show this Comment</a></h3>
+  </div>
+  <% end %>
+</div>
 
-<h1>User Posts:</h1>
+<div id='userPosts'>
+<h1 id='userPostHeader'>User Posts:</h1>
 <% if @posts != nil %>
 <% @posts.each do |post| %>
-<h2>POST TITLE: <%= post.title %></h2>
-<h3>USER ID: <%= @users.find(post.user_id).email %></h3>
-<h3><a href='/posts/<%= post.id %>'>Show this Post</a></h3>
-<a href='/posts/<%= post.id %>/edit'>Edit This Post</a><br><br>
-<%= link_to "Delete this Post!", post, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %><br><br>
-<a href='/posts'>Home</a>
+<div id='userPost'>
+<h2>Post: <a href='/posts/<%= post.id %>'><%= post.title %></a></h2>
+<a href='/posts/<%= post.id %>'><img src='<%= post.image %>'></a><br>
+
+<a href='/posts/<%= post.id %>/edit'>Edit This Post</a>
+<%= link_to "Delete this Post!", post, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+<br><br></div>
 <% end %>
 <% end %>
+</div>

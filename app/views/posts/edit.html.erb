@@ -1,5 +1,9 @@
 <br>
+<% if @user_id == @post.user_id %>
 <%= render 'form' %>
+<% else %>
+<h1>This is not your post!</h1>
+<% end %>
 <br>
 <a href='/comments'>Back</a><br>
 <a href='/posts'>Home</a>

@@ -1,11 +1,13 @@
-
+<br>
+<br>
+<br>
 <%= form_for @comment do |f| %>
   <p>
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
+    <%= f.label Comment, class: 'commentField' %><br>
+    <%= f.text_field :content, class: 'commentField' %>
   </p>
 
-  <p>
+  <p id='submit'>
     <%= f.submit %>
   </p>
 <% end %>

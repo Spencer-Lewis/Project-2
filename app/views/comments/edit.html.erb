@@ -1,12 +1,15 @@
+<br>
+<% if @user_id == @comment.user_id %>
+  <%= form_for @comment do |f| %>
+    <p>
+      <%= f.label :content %><br>
+      <%= f.text_field :content %>
+    </p>
 
-<%= form_for @comment do |f| %>
-  <p>
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+<% else %>
+<h1>This is not your Comment!</h1>
 <% end %>
-

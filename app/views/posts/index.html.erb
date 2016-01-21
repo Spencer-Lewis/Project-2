@@ -1,10 +1,20 @@
-<h1>Posts:</h1>
+<h1 id='postIndexHeader'>Posts:</h1>
 
-
+<div id='allPosts'>
 <% @posts.each do |post| %>
-<h2>Title: <a href='/posts/<%= post.id %>'><%= post.title %></a></h2>
-Posted by: <%= @user.find(post.user_id).email %><br>
-Image: <img src='<%= post.image %>'><br>
-Link: <a href='<%= post.link %>'><%= post.link %></a><br><br>
+<div id='post'>
+  <br>
+  <div id='postInfo'>
+    Posted by: <%= @user.find(post.user_id).email %><br>
+    <a href='<%= post.link %>'>Source</a>
+  </div>
+  <div id='postPlate'>
+    <a href='/posts/<%= post.id %>'><%= post.title %></a>
+    <br>
+    <a href='/posts/<%= post.id %>'><img src='<%= post.image %>'></a>
+  </div>
 
+  <br>
+</div>
 <% end %>
+</div>

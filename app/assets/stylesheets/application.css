@@ -15,27 +15,208 @@
  */
 body {
   background-color: lightgrey;
+  font-family: 'Lato', sans-serif;
 }
 
 #nav {
   list-style: none;
-  margin-top: -10px;
+  margin-top: -8px;
   padding: 0;
   position: fixed;
   background-color: grey;
-  width: 99%;
+  width: 97%;
+  margin-right: 1%;
+  margin-left: .5%;
+  border: 3px solid black;
+  border-radius: 10px;
 }
-li {
+#nav li {
   display: inline;
   font-weight: bold;
   font-size: 25px;
   margin-left: 5px;
   margin-right: 5px;
+}
+#nav li a {
+  float: right;
+  margin-left: 8px;
+  margin-right: 8px;
+  text-decoration: none;
+  color: darkred;
+}
+
+#nav li a:hover {
+    background-color: #555;
+    color: green;
+}
+
+#showPost {
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid black;
+  width: 40%;
+  background: white;
+  margin-left: 30%;
+}
+#showPost h2 img {
+  max-width: 80%;
+}
+
+#showPost li {
+  list-style: none;
+  display: inline;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 50px;
+}
+
+#postInfo {
+  margin-left: -1%;
+}
+
+#namePlate {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#commentContent {
+  font-size: 25px;
+}
+
+#comments {
+  border-top: 1px solid black;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#post {
+  border-bottom: 1px solid black;
+  padding-left: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  /*text-align: center;*/
+}
+
+#commentHeader {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
 
 }
-li a {
-  float: right;
-  margin-left: 5px;
-  margin-right: 5px;
 
+#userCommentHeader {
+  padding-bottom: 10px;
+  border-bottom: 3px solid black;
+}
+
+#userPostHeader {
+  padding-bottom: 10px;
+  border-bottom: 3px solid black;
+}
+
+#postIndexHeader {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  width: 10%;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+
+#allPosts {
+  background: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 25px;
+  border: 1px solid black;
+
+  /*text-align: center;*/
+}
+
+#allComments {
+  background: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+#userComments {
+  background: white;
+  border-radius: 13px;
+  float: left;
+  margin-left: 5%;
+  width: 43.5%;
+  border: 1px solid black;
+  text-align: center;
+}
+#userComment {
+  border-bottom: 1px solid black;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#userPost{
+  border-bottom: 1px solid black;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#userPosts {
+  background: white;
+  border-radius: 13px;
+  float: right;
+  margin-right: 5%;
+  border-left: .5px solid black;
+  width: 43.5%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#userPost a img {
+  max-width: 80%;
+}
+
+#postInfo {
+  font-size: 20px;
+  float: right;
+  width: 50%;
+  padding-top: 5%;
+}
+
+#postInfo a {
+  text-decoration: none;
+}
+
+#postPlate {
+  max-width: 40%;
+  margin-left: 10%;
+}
+#postPlate a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#postPlate img {
+  max-height: 50%;
+  max-width: 85%;
+}
+
+.postField {
+  width: 50%;
+}
+
+.commentField {
+  width: 60%;
+  height: 25px;
+  margin-left: 20%;
+}
+
+#submit {
+  margin-left: 20%;
 }

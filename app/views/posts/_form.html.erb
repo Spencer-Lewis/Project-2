@@ -2,17 +2,17 @@
 <%= form_for @post do |f| %>
   <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'postField' %>
   </p>
 
   <p>
     <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.text_field :image, class: 'postField' %>
   </p>
 
   <p>
     <%= f.label :link %><br>
-    <%= f.text_field :link %>
+    <%= f.text_field :link, class: 'postField' %>
   </p>
 
   <p>
