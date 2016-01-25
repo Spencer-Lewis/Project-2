@@ -7,6 +7,8 @@ Heroku: https://whispering-thicket-51264.herokuapp.com/
 
 Github: https://github.com/Spencer-Lewis/Project-2
 
+Trello Board: https://trello.com/b/KgJxWkah/project-2
+
 ----------------------------
 Included in this repository:
 ----------------------------
